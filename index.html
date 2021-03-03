@@ -2,253 +2,110 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name-"viewport" content="width=device-width, initial-scale=1.0">
-        <title>Horario  6to D</title>
-        <link rel="shortcut icon" href="https://www.flaticon.es/svg/static/icons/svg/2802/2802888.svg" type="image/x-icon">
-        <base href="" target="_blank">
-        <style>
-            /* ---------------Variables--------------- */
-:root{
-     --encabezado: rgb(71, 130, 185);
-     --sub_encabezado: rgb(227, 232, 255);
-     --recreo: rgb(212, 211, 211);
-     --hora: rgb(167, 227, 255);
-     --recordatorio: rgb(47, 192, 202);
-     --resaltado: rgb(187, 13, 13);
-     --recordarles: rgb(155, 209, 148);
-}
-
-/* ---------------Estilos Generales--------------- */
-body{
-    font-family: sans-serif;
-    background-image: url(https://a-static.besthdwallpaper.com/estrellas-en-el-espacio-papel-pintado-3840x1200-298_62.jpg);
-    background-position: top right;
-}
-
-table{
-    margin: 1.3rem auto;
-    width: 85%;
-    border-collapse: collapse;
-    font-size: 1rem;
-    text-align: center;
-    border: solid .1rem black;
-    box-shadow: 10px 10px 10px rgba(53, 53, 53, 0.644);
-}
-
-caption{
-    font-size: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.562);
-    border-radius: 10px 10px 0px 0px;
-}
-
-th, td{
-    padding: 1.2% 0.4%;
-    width: 7%;
-    position: relative;
-    border-right-color: rgb(209, 207, 207);
-    background-color: white;
-}
-
-abbr{
-    text-decoration: none;
-    cursor: help;
-}
-
-::selection{
-    background-color: black;
-    color: white;
-}
-
-a:any-link{
-    color: rgb(57, 57, 228);
-    text-decoration: none;
-    font-style: italic;
-}
-
-a:hover{
-    color: rgb(3, 3, 180);
-    text-decoration: underline black solid;
-}
-
-/* ---------------Encabezados--------------- */
-thead tr th{
-    background-color: var(--encabezado);
-    letter-spacing: .1rem;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: normal;
-    border-right-color: var(--encabezado);
-}
-
-/* ---------------Sub-encabezados(numeración) y Sección HORA--------------- */
-tbody tr th, tbody tr td:last-child{
-    background-color: var(--sub_encabezado);
-    width: 7.5%;
-}
-
-/* ---------------Sección RECREO--------------- */
-td[colspan]{
-    background-color: var(--recreo);
-    font-weight: bold;
-}
-
-/* ---------------Estilos al hacer HOVER--------------- */
-
-tbody tr :hover ~ td:last-child{
-    background-color: var(--hora);
-    font-weight: bold;
-}
-
-tbody tr :hover ~ td span:last-child{
-    color: var(--resaltado);
-}
-
-/* ---------------Recordatorio--------------- */
-
-tbody tr td span:not(.subrayar){
-    padding: 4%;
-    display: none;
-    width: 180%;
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    z-index: 1;
-    background-color: var(--recordatorio);
-    border-radius: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-tbody tr td span:not(.subrayar)::before{
-    content: "";
-    width: 6%;
-    height: 10%;
-    display: block;
-    position: absolute;
-    left: 12%;
-    bottom: 90%;
-    box-sizing: border-box;
-    border: transparent 15px solid;
-    border-bottom: var(--recordatorio) 15px solid;
-}
-
-tbody tr td:hover span:not(.subrayar){
-    display: block;
-}
-
-tbody tr td.recordatorio{
-    text-decoration: underline solid red;
-}
-
-tbody tr td.asistencia{
-    text-decoration: underline solid blue;
-}
-
-td.recordarles{
-    background-color:var(--recordarles);
-}
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horario de 6toD</title>
+        <link rel="shortcut icon" href="./src/img/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./src/css/index.css">
+        <!-- <base href="" target="_blank"> -->
     </head>
-    
     <body>
-        <table border>
-            <caption>Horario</caption>
-            <thead>
-                <tr class="dia_semana">
-                    <th></th>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Hora</th>
-                </tr> 
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
-                <td class="recordatorio"><abbr title="Formación Integral Humana y Religiosa: Melina García ">FIHYR</abbr><span>Conferencia en Google Meet: <a href="https://meet.google.com/vpm-svur-dda">Link</a></span></td>
-                <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
-                <td class="recordatorio"><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr><span class="recordatorio">Conferencia en Google Meet: <a href="https://meet.google.com/xtf-mmzw-pyv?authuser=5">Link</a></span></td>
-                <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/viewform">Asistencia</a></span></td>
-                <td>7:10 am - <span class="subrayar">8:00 am</span></td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
-                <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
-                <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
-                <td class="recordatorio"><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr><span>Conferencia en Google Meet: <a href="https://meet.google.com/mpm-tugc-xpc?authuser=5">Link</a></span></td>
-                <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
-                <td>8:00 am - <span class="subrayar">8:50 am</span></td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
-                <td class="recordatorio"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Introducción de Actividades - Conferencia en Google Meet: <a href="https://meet.google.com/sua-bpgf-ybn">Link</a> <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
-                <td class="asistencia"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Formulario: <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
-                <td class="asistencia"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
-                <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
-                <td>8:50 am - <span class="subrayar">9:40 am</span></td>
-            </tr>
-            <tr>
-                <td colspan="6">RECREO</td>
-                <td>9:40 am - <span class="subrayar">10:00 am</span></td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr></td>
-                <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
-                <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
-                <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
-                <td><abbr title="Educacion Física: Manuel Suarez Abreu">Ed.F</abbr></td>
-                <td>10:00 am - <span class="subrayar">10:50 am</span></td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr></td>
-                <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
-                <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
-                <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
-                <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
-                <td>10:50 am - <span class="subrayar">11:40 am</span></td>
-            </tr>
-            <tr>
-                <th>6</th>
-                <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
-                <td><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr></td>
-                <td><abbr title="Educacion Artística: Roniel Tejada ">Ed.A</abbr></td>
-                <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
-                <td class="asistencia recordarles"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
-                <td>11:40 am - <span class="subrayar">12:20 pm</span></td>
-            </tr>
-            <tr>
-                <td colspan="6">RECREO</td>
-                <td>12:20 pm - <span class="subrayar">1:00 pm</span></td>
-            </tr>
-            <tr>
-                <th>7</th>
-                <td class="asistencia"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
-                <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
-                <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
-                <td class="recordatorio"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Cierre Actividades - Conferencia en Google Meet: <a href="https://meet.google.com/sua-bpgf-ybn">Link</a> <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
-                <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
-                <td>1:00 pm - <span class="subrayar">1:50 pm</span></td>
-            </tr>
-            <tr>
-                <th>8</th>
-                <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
-                <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
-                <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
-                <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
-                <td><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr></td>
-                <td>1:50 pm - <span class="subrayar">2:40 pm</span></td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="container">
+            <table border>
+                <caption>Horario</caption>
+                <thead>
+                    <tr class="dia_semana">
+                        <th></th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Hora</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
+                    <td class="recordatorio"><abbr title="Formación Integral Humana y Religiosa: Melina García ">FIHYR</abbr><span>Conferencia en Google Meet: <a href="https://meet.google.com/vpm-svur-dda">Link</a></span></td>
+                    <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
+                    <td class="recordatorio"><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr><span class="recordatorio">Conferencia en Google Meet: <a href="https://meet.google.com/xtf-mmzw-pyv?authuser=5">Link</a></span></td>
+                    <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/viewform">Asistencia</a></span></td>
+                    <td>7:10 am - <span class="subrayar">8:00 am</span></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
+                    <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
+                    <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
+                    <td class="recordatorio"><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr><span>Conferencia en Google Meet: <a href="https://meet.google.com/mpm-tugc-xpc?authuser=5">Link</a></span></td>
+                    <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
+                    <td>8:00 am - <span class="subrayar">8:50 am</span></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
+                    <td class="recordatorio"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Introducción de Actividades - Conferencia en Google Meet: <a href="https://meet.google.com/sua-bpgf-ybn">Link</a> <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
+                    <td class="asistencia"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Formulario: <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
+                    <td class="asistencia"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
+                    <td><abbr title="Ciencias Sociales: Johanna Peña">SOC</abbr></td>
+                    <td>8:50 am - <span class="subrayar">9:40 am</span></td>
+                </tr>
+                <tr>
+                    <td colspan="6">RECREO</td>
+                    <td>9:40 am - <span class="subrayar">10:00 am</span></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr></td>
+                    <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
+                    <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
+                    <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
+                    <td><abbr title="Educacion Física: Manuel Suarez Abreu">Ed.F</abbr></td>
+                    <td>10:00 am - <span class="subrayar">10:50 am</span></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr></td>
+                    <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
+                    <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
+                    <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
+                    <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
+                    <td>10:50 am - <span class="subrayar">11:40 am</span></td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td><abbr title="Lengua Extranjera (Ingles): Odanny Gómez ">ING</abbr></td>
+                    <td><abbr title="Emprendimiento: Iselsa Ángeles Tejada">EMP</abbr></td>
+                    <td><abbr title="Educacion Artística: Roniel Tejada ">Ed.A</abbr></td>
+                    <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
+                    <td class="asistencia recordarles"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
+                    <td>11:40 am - <span class="subrayar">12:20 pm</span></td>
+                </tr>
+                <tr>
+                    <td colspan="6">RECREO</td>
+                    <td>12:20 pm - <span class="subrayar">1:00 pm</span></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td class="asistencia"><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
+                    <td><abbr title="Lengua Española: Angela Felix">ESP</abbr></td>
+                    <td><abbr title="Ciencia de la Naturaleza: Lenny Rosario">NAT</abbr></td>
+                    <td class="recordatorio"><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr><span>Cierre Actividades - Conferencia en Google Meet: <a href="https://meet.google.com/sua-bpgf-ybn">Link</a> <a href="https://forms.gle/3CY6JCLLtwerW6DWA">Asistencia</a></span></td>
+                    <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
+                    <td>1:00 pm - <span class="subrayar">1:50 pm</span></td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td><abbr title="Desarrollo de Implementación de Soluciones Web y Multimedia: Mariela García Díaz">DISWM</abbr></td>
+                    <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
+                    <td class="asistencia recordarles"><abbr title="Implementación y Mantenimiento de Aplicaciones y Sistemas Informáticos: Mariela García Díaz y Lizandro Ramírez">IMASI</abbr><span>Formulario: <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0k7Yngb00VNn4F1frSN204-CXnTJhO0r-vbPLHTNVzclBrQ/formResponse">Asistencia</a></span></td>
+                    <td><abbr title="Formación en Centros de Trabajo: Lizandro Ramírez">FCT</abbr></td>
+                    <td><abbr title="Matemáticas: Iselsa Ángeles Tejada">MAT</abbr></td>
+                    <td>1:50 pm - <span class="subrayar">2:40 pm</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
