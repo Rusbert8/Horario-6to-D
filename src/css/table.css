@@ -1,0 +1,75 @@
+/* Heading */
+thead tr th{
+    background-color: var(--encabezado);
+    letter-spacing: .1rem;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: normal;
+    border-right-color: var(--encabezado);
+}
+
+/* Subheading and time */
+tbody tr th, tbody tr td:last-child{
+    background-color: var(--sub_encabezado);
+    width: 7.5%;
+}
+
+/* Recreo  */
+td[colspan]{
+    background-color: var(--recreo);
+    font-weight: bold;
+}
+
+/* Hover */
+tbody tr :hover ~ td:last-child{
+    background-color: var(--hora);
+    font-weight: bold;
+}
+
+tbody tr :hover ~ td span:last-child{
+    color: var(--resaltado);
+}
+
+/* Reminders */
+tbody tr td span:not(.subrayar){
+    padding: 4%;
+    display: none;
+    width: 180%;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    z-index: 1;
+    background-color: var(--recordatorio);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+tbody tr td span:not(.subrayar)::before{
+    content: "";
+    width: 6%;
+    height: 10%;
+    display: block;
+    position: absolute;
+    left: 12%;
+    bottom: 90%;
+    box-sizing: border-box;
+    border: transparent 15px solid;
+    border-bottom: var(--recordatorio) 15px solid;
+}
+
+tbody tr td:hover span:not(.subrayar){
+    display: block;
+}
+
+tbody tr td.recordatorio{
+    text-decoration: underline solid red;
+}
+
+tbody tr td.asistencia{
+    text-decoration: underline solid blue;
+}
+
+td.recordarles{
+    background-color:var(--recordarles);
+}
